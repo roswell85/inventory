@@ -1,0 +1,22 @@
+<div class="nav" #myNav>
+  <input type="checkbox" id="nav-check">
+  <div class="nav-header">
+    <div class="nav-title">
+      <a href="https://ntgclarity.com/"></a>
+    </div>
+  </div>
+  <div class="nav-btn">
+    <label for="nav-check">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+  </div>
+
+  <div class="nav-links">
+
+    <a *ngFor="let i of data" [href]="i=='by NTG team'?'https://ntgclarity.com/':'#'+i" style="color:white;"
+    (click)="HandleNavItemClick($event,myNav)">{{i}}</a>
+
+  </div>
+</div>
